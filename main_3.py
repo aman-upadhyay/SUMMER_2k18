@@ -32,7 +32,7 @@ def process(f):
 	cube=SpectralCube.read(a[f])
 	cube=cube.spectral_slab(-7 *u.km/u.s,-1.1 *u.km/u.s)
 	arr=integrate(cube)
-	writematrixtofits(arr,b[i])
+	writematrixtofits(arr,b[f])
 	arr=None
 	cube=None
 def integrate(cube):
